@@ -1,6 +1,6 @@
 # Welcome Authentication App
 
-A small learning project that demonstrates a complete web authentication journey:
+A learning project that demonstrates a complete web authentication journey:
 
 1. A visitor opens a welcome page.
 2. The visitor signs up with basic user information.
@@ -8,7 +8,7 @@ A small learning project that demonstrates a complete web authentication journey
 4. The application displays a successful welcome message.
 5. The user logs out and returns to the public application.
 
-This repository is currently in the **documentation phase**. It intentionally contains no application code.
+The project is currently in the **application foundation phase**. The Next.js application and welcome page exist, but authentication, database integration, browser tests, CI, and deployment are not implemented yet.
 
 ## Documentation
 
@@ -19,6 +19,35 @@ This repository is currently in the **documentation phase**. It intentionally co
 - [GitHub Workflow](docs/GITHUB_WORKFLOW.md)
 - [Deployment Plan](docs/DEPLOYMENT.md)
 - [Contributor Instructions](AGENTS.md)
+- [Web Application Setup](apps/web/README.md)
+
+## Application Location
+
+The Next.js web application is located at `apps/web`.
+
+## Run Locally
+
+From the repository root:
+
+```bash
+cd apps/web
+npm ci
+npm run dev
+```
+
+Open `http://localhost:3000`.
+
+## Quality Checks
+
+From `apps/web`, run:
+
+```bash
+npm run lint
+npm run typecheck
+npm run build
+```
+
+All checks must pass before a pull request is merged.
 
 ## Selected Technology
 
@@ -31,13 +60,18 @@ This repository is currently in the **documentation phase**. It intentionally co
 
 ## Current Status
 
-| Phase | Status |
+| Area | Status |
 | --- | --- |
 | Requirements | Documented |
 | Architecture | Documented |
-| Testing strategy | Documented |
-| GitHub workflow | Documented |
-| Deployment strategy | Documented |
-| Application code | Not started |
+| Next.js foundation | Implemented |
+| Responsive welcome page | Implemented |
+| Lint and type checking | Passing |
+| Production build | Passing |
+| Signup and login | Not started |
+| Supabase integration | Not started |
+| Playwright tests | Not started |
+| GitHub Actions | Not started |
+| Deployment | Not started |
 
-Coding begins only after the documentation is reviewed and the development milestone is explicitly approved.
+Development follows approved GitHub issues, feature branches, pull requests, and passing automated checks.
