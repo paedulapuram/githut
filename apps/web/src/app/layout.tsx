@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -18,7 +19,11 @@ export const metadata: Metadata = {
     "A learning application for signup, login, protected content, and logout.",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+type RootLayoutProps = {
+  children: ReactNode;
+};
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html
       lang="en"
