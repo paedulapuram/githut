@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+
+# Local environment files and secrets
+.env
+.env.*
+!.env.example
+
+# Test output
+playwright-report/
+test-results/
+coverage/
+
+# Deployment metadata
+.vercel/
+
+# Logs
+*.log
+
+# Operating system and editor files
+.DS_Store
+.idea/
+.vscode/
