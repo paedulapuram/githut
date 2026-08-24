@@ -45,6 +45,7 @@ From `apps/web`, run:
 npm run lint
 npm run typecheck
 npm run build
+npm run test:e2e
 ```
 
 All checks must pass before a pull request is merged.
@@ -70,7 +71,8 @@ All checks must pass before a pull request is merged.
 | Production build | Passing |
 | Signup and login | Not started |
 | Supabase integration | Not started |
-| Playwright tests | Not started |
+| Playwright foundation | Implemented |
+| Welcome-page browser test | Passing in Chromium |
 | GitHub Actions | Not started |
 | Deployment | Not started |
 

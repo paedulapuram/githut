@@ -2,7 +2,7 @@
 
 The web application for the Welcome Authentication App learning project.
 
-This application currently contains the Next.js foundation and a responsive welcome page. Signup, login, database integration, protected account access, logout, Playwright, and deployment will be added in later milestones.
+This application currently contains the Next.js foundation, a responsive welcome page, and Playwright browser testing. Signup, login, database integration, protected account access, logout, CI, and deployment will be added in later milestones.
 
 ## Technology
 
@@ -68,6 +68,13 @@ Run these commands before opening a pull request:
 npm run lint
 npm run typecheck
 npm run build
+npm run test:e2e
+```
+
+Open the most recent Playwright HTML report:
+
+```bash
+npm run test:e2e:report
 ```
 
 ## Production Preview
@@ -89,6 +96,8 @@ The `start` command requires a successful `npm run build` first.
 | `npm run typecheck` | Check TypeScript without generating files |
 | `npm run build` | Create an optimized production build |
 | `npm run start` | Run the production build locally |
+| `npm run test:e2e` | Run Playwright tests in Chromium |
+| `npm run test:e2e:report` | Open the Playwright HTML report |
 
 ## Current Scope
 
@@ -101,6 +110,9 @@ Implemented:
 - Responsive welcome page
 - Project metadata
 - Turbopack root configuration
+- Playwright Chromium configuration
+- Automated welcome-page browser test
+- Playwright HTML reports and failure artifacts
 
 Not implemented yet:
 
@@ -110,7 +122,6 @@ Not implemented yet:
 - PostgreSQL profile data
 - Protected account page
 - Logout
-- Playwright browser tests
 - GitHub Actions
 - Vercel deployment
 
