@@ -2,7 +2,7 @@
 
 The web application for the Welcome Authentication App learning project.
 
-This application currently contains the Next.js foundation, a responsive welcome page, and Playwright browser testing. Signup, login, database integration, protected account access, logout, CI, and deployment will be added in later milestones.
+This application currently contains the Next.js foundation, responsive welcome page, Playwright browser testing, GitHub Actions CI, and the Supabase database and authentication foundation. Signup, login, protected account access, logout, authentication browser tests, and deployment will be added in later milestones.
 
 ## Technology
 
@@ -10,6 +10,8 @@ This application currently contains the Next.js foundation, a responsive welcome
 - React
 - TypeScript
 - Tailwind CSS
+- Supabase Auth
+- Supabase PostgreSQL
 - ESLint
 - npm
 
@@ -110,26 +112,45 @@ Implemented:
 - Responsive welcome page
 - Project metadata
 - Turbopack root configuration
+- Supabase JavaScript and SSR dependencies
+- Supabase browser and server clients
+- Cookie session-refresh Proxy
+- Safe environment-variable example
+- Development Supabase project
+- PostgreSQL profiles migration
+- Row Level Security profile policies
 - Playwright Chromium configuration
 - Automated welcome-page browser test
 - Playwright HTML reports and failure artifacts
+- GitHub Actions quality workflow
 
 Not implemented yet:
 
-- Signup
+- Signup and email confirmation
 - Login
-- Supabase authentication
-- PostgreSQL profile data
 - Protected account page
 - Logout
-- GitHub Actions
+- Playwright authentication journeys
 - Vercel deployment
 
 ## Environment Variables
 
-The current welcome page requires no environment variables.
+Copy the safe example file to create a private local configuration:
 
-Future authentication configuration will be documented in `.env.example`. Never commit `.env`, `.env.local`, passwords, tokens, or private keys.
+```bash
+cp .env.example .env.local
+```
+
+Set these values in `.env.local`:
+
+```dotenv
+NEXT_PUBLIC_SUPABASE_URL=https://your-project-reference.supabase.co
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=sb_publishable_your_key
+```
+
+Get the Project URL and publishable key from the Supabase project Connect panel. The publishable key is intended for public application clients and remains restricted by Row Level Security policies.
+
+Never add a Supabase secret key or legacy service-role key to the application. Never commit `.env.local`, passwords, tokens, private keys, or production credentials.
 
 ## Repository Workflow
 

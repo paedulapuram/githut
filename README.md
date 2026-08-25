@@ -8,7 +8,7 @@ A learning project that demonstrates a complete web authentication journey:
 4. The application displays a successful welcome message.
 5. The user logs out and returns to the public application.
 
-The project is currently in the **application foundation phase**. The Next.js application and welcome page exist, but authentication, database integration, browser tests, CI, and deployment are not implemented yet.
+The project is currently in the **database and authentication foundation phase**. The Next.js application, responsive welcome page, Playwright foundation, GitHub Actions workflow, Supabase clients, session-refresh proxy, and profiles database are implemented. Signup, login, protected account access, logout, authentication browser tests, and deployment are not implemented yet.
 
 ## Documentation
 
@@ -70,10 +70,12 @@ All checks must pass before a pull request is merged.
 | Lint and type checking | Passing |
 | Production build | Passing |
 | Signup and login | Not started |
-| Supabase integration | Not started |
+| Supabase development project | Configured |
+| Supabase client foundation | Implemented |
+| Profiles table and RLS policies | Implemented |
 | Playwright foundation | Implemented |
 | Welcome-page browser test | Passing in Chromium |
-| GitHub Actions | Not started |
+| GitHub Actions | Implemented |
 | Deployment | Not started |
 
 Development follows approved GitHub issues, feature branches, pull requests, and passing automated checks.
